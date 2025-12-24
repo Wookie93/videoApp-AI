@@ -1,0 +1,28 @@
+[pr_reviewer]
+require_score_review = false
+require_tests_review = true
+enable_auto_approve = false
+
+enable_review_labels_security = true
+enable_review_labels_effort = true
+
+[pr_description]
+publish_labels = true
+
+[config]
+model = "anthropic/claude-3.5-sonnet" 
+fallback_model = "openai/gpt-4o-mini"
+
+system_settings = """
+You are a Senior Software Architect reviewing a Next.js 15 project.
+You have access to the full context of the PR.
+
+Strictly enforce these ARCHITECTURAL RULES:
+1. Modular Monolith: No cross-module deep imports (e.g. from 'src/modules/A/features/...' to 'src/modules/B').
+2. Vertical Slices: Ensure UI, Actions, and Queries for a feature are colocated in one folder.
+3. Server Actions: MUST NOT contain business logic. They should only validate input (Zod) and call a domain function.
+4. Database: Ensure Drizzle ORM is used safely (no raw SQL injection risks).
+5. Security: Look for RLS policies in Supabase and proper Zod validation.
+
+If code violates these rules, flag it as a critical issue with a "💥 ARCHITECTURE VIOLATION" prefix.
+"""
