@@ -10,8 +10,8 @@ enable_review_labels_effort = true
 publish_labels = true
 
 [config]
-model = "anthropic/claude-3.5-sonnet" 
-fallback_model = "openai/gpt-4o-mini"
+model = "mistralai/devstral-2512" 
+fallback_model = "deepseek/deepseek-v3.2"
 
 system_settings = """
 You are a Senior Software Architect reviewing a Next.js 15 project.
