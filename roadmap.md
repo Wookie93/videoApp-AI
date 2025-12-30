@@ -7,20 +7,20 @@
 
 ## SPRINT 1. Basic Setup
 
-    [ ] 1.1. Environment Setup
+    [x] 1.1. Environment Setup
         Create .env.local file with variables: DATABASE_URL (Supabase Transaction Pooler), NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY.
         Install missing packages: npm install drizzle-orm postgres dotenv oraz npm install -D drizzle-kit tsx.
 
-    [ ] 1.2. Schema Definition
+    [x] 1.2. Schema Definition
         Create src/shared/db/schema.ts
         Create src/shared/db/index.ts 
 
-    [ ] 1.3. Data Migration (Seed)
+    [x] 1.3. Data Migration (Seed)
         Create scripts/seed.ts
         Run migration: npx drizzle-kit push.
         Run seed: npx tsx scripts/seed.ts.
 
-    [ ] 1.4. Supabase Setup
+    [x] 1.4. Supabase Setup
         Configure tables and RLS policies.   
 
     [ ] 1.5. Global Layout & UI Kit
@@ -84,7 +84,9 @@ SPRINT 4: Search & Filter
         src/app/(main)/movies/page.tsx i tv-series/page.tsx.
         Use the same RecommendedGrid component, but with category filter.
 
-SPRINT 5: Polish & DevOps
+SPRINT 5: Reviews & Watchlists
+
+SPRINT 6: Polish & DevOps
 
     [ ] 5.1. Code Quality
         Run npx esc/eslint and fix all warnings.
@@ -101,7 +103,7 @@ SPRINT 5: Polish & DevOps
         Write documentation: Describe the Modular Monolith architecture, why Server Actions, how to run the project.
         Add database schema (mermaid diagram).
 
-Sprint 6: AI Features
+SPRINT 7: AI Features
 
     [ ] 6.1. Vector Search
         Goal: The user enters: ‘Something like The Matrix, but more philosophical’ -> The database performs a Cosine Similarity Search and returns ‘Ghost in the Shell’.

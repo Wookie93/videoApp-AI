@@ -32,10 +32,10 @@ export default function RootLayout({
       >
         <SidebarProvider>
           <AppSidebar />
-          <main className="w-full flex flex-col gap-4">
-            <SidebarTrigger />
-            <div className="w-[200px]">
-              <Input placeholder="Wyszukaj" />
+          <main className="w-full min-w-0 overflow-hidden flex flex-col gap-4 px-4">
+            <div className="flex items-center gap-4 py-4">
+              <SidebarTrigger />
+              <Input className="w-[250px]" placeholder="Wyszukaj" />
             </div>
             {children}
           </main>

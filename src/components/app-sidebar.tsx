@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { Calendar, Home, Inbox, LogIn } from "lucide-react"
 
 import {
     Sidebar,
@@ -9,34 +9,25 @@ import {
     SidebarMenu,
     SidebarMenuButton,
     SidebarMenuItem,
+    SidebarSeparator,
 } from "@/components/ui/sidebar"
 
 // Menu items.
 const items = [
     {
         title: "Home",
-        url: "#",
+        url: "/",
         icon: Home,
     },
     {
-        title: "Inbox",
-        url: "#",
+        title: "Movies",
+        url: "movies",
         icon: Inbox,
     },
     {
-        title: "Calendar",
-        url: "#",
+        title: "TV Series",
+        url: " tv-series",
         icon: Calendar,
-    },
-    {
-        title: "Search",
-        url: "#",
-        icon: Search,
-    },
-    {
-        title: "Settings",
-        url: "#",
-        icon: Settings,
     },
 ]
 
@@ -58,6 +49,23 @@ export function AppSidebar() {
                                     </SidebarMenuButton>
                                 </SidebarMenuItem>
                             ))}
+                        </SidebarMenu>
+                    </SidebarGroupContent>
+
+                    <div className="pr-4 mt-6">
+                        <SidebarSeparator className="my-2 bg-gray-500/50" />
+                    </div>
+
+                    <SidebarGroupContent>
+                        <SidebarMenu>
+                            <SidebarMenuItem>
+                                <SidebarMenuButton asChild>
+                                    <a href="/sign-in">
+                                        <LogIn />
+                                        <span>Sign in</span>
+                                    </a>
+                                </SidebarMenuButton>
+                            </SidebarMenuItem>
                         </SidebarMenu>
                     </SidebarGroupContent>
                 </SidebarGroup>
