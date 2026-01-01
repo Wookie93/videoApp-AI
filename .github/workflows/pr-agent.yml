@@ -21,7 +21,6 @@ jobs:
         uses: Codium-ai/pr-agent@main
         env:
           OPENAI_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          OPENAI_API_BASE: "https://openrouter.ai/api/v1"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          github_action_config_file: .github/pr_agent_config.toml
+          OPENAI.API_BASE: "https://openrouter.ai/api/v1"
+          GITHUB_ACTION_CONFIG_FILE: ".github/pr_agent_config.toml"
