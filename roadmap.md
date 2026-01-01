@@ -23,11 +23,11 @@
     [x] 1.4. Supabase Setup
         Configure tables and RLS policies.   
 
-    [ ] 1.5. Global Layout & UI Kit
+    [x] 1.5. Global Layout & UI Kit
         Add basic layout and styles 
         navigation between pages
 
-    [ ] 1.6. AI Review 
+    [x] 1.6. AI Review 
         Create CI/CD pipline with AI agent making a PR and reviewing it. 
 
 ## SPRINT 2: Read-Only Features

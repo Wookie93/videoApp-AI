@@ -4,9 +4,13 @@ import { Heart } from "lucide-react";
 interface MovieBoxProps {
     type: string;
     inView?: boolean;
+    movie?: any;
 }
 
-export function MovieBox({ type, inView = true }: MovieBoxProps) {
+export function MovieBox({ type, inView = true, movie }: MovieBoxProps) {
+    if (!movie) return null;
+    const { title, year, category, rating, thumbnail } = movie;
+
     return (
         <div
             className={`
@@ -35,11 +39,11 @@ export function MovieBox({ type, inView = true }: MovieBoxProps) {
             <Skeleton className="w-full h-full" />
             <div>
                 <div>
-                    <span>Year</span>
-                    <span>Category</span>
-                    <span>Tags</span>
+                    <span>{year}</span>
+                    <span>{category}</span>
+                    <span>{rating}</span>
                 </div>
-                <p>Movie Title</p>
+                <p>{title}</p>
             </div>
         </div>
     )

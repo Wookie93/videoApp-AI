@@ -6,10 +6,11 @@ import { MovieBox } from '../MovieBox';
 import { CarouselPrevButton, CarouselNextButton } from '@/modules/catalog/components/movie-box-rail/CarouselNavigation';
 
 interface MovieBoxRailProps {
-    items?: number;
+    movies?: any;
+    items?: any;
 }
 
-const MovieBoxRail = ({ items = 10 }: MovieBoxRailProps) => {
+const MovieBoxRail = ({ movies, items = 10 }: MovieBoxRailProps) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [emblaRef, emblaApi] = useEmblaCarousel({
         align: 'start',
@@ -93,6 +94,7 @@ const MovieBoxRail = ({ items = 10 }: MovieBoxRailProps) => {
                             >
                                 <MovieBox
                                     type="slider"
+                                    movie={movies[index]}
                                     inView={slidesInView.includes(index)}
                                 />
                             </div>
