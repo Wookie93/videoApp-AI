@@ -5,4 +5,4 @@ export default function MoviesPage() {
     return (
         <CategoryGrid type={CategoryName.Movie} />
     );
-};
+}

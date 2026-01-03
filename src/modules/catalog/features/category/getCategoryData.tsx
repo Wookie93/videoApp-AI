@@ -8,5 +8,5 @@ export const getCategoryData = cache(async ({ type }: { type: CategoryName }) =>
     const categoryData = await db.query.movies.findMany({
         where: eq(movies.category, type)
     });
-    return categoryData;
+    return categoryData ?? [];
 })

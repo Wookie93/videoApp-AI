@@ -4,6 +4,6 @@ import { cache } from "react";
 
 export const getRecommended = cache(async () => {
     const recommendedMovies = await db.select().from(movies)
-    return recommendedMovies
+    return recommendedMovies ?? []
 })
 

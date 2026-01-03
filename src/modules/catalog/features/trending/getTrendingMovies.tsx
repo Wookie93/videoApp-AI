@@ -11,5 +11,5 @@ export const getTrendingMovies = cache(async () => {
         limit: 10,
     });
 
-    return trendingMovies;
+    return trendingMovies ?? [];
 });

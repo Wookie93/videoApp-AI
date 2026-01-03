@@ -5,7 +5,7 @@ import { CategoryName } from "../../types";
 const CategoryGrid = async ({ type }: { type: CategoryName }) => {
 
     const categoryData = await getCategoryData({ type });
-
+    if (!categoryData) return null;
     return (
         <MovieGrid movies={categoryData} header={type} />
     )

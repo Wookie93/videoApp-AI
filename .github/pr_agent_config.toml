@@ -10,7 +10,7 @@ enable_review_labels_effort = true
 publish_labels = true
 
 [config]
-model = "deepseek/deepseek-v3.2" 
+model = "x-ai/grok-code-fast-1" 
 fallback_model = "deepseek/deepseek-v3.2"
 
 system_settings = """
