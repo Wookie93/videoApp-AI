@@ -1,9 +1,8 @@
-import { MovieGrid } from "@/modules/catalog/components/movie-grid/MovieGrid";
+import CategoryGrid from "@/modules/catalog/features/category/categoryGrid";
+import { CategoryName } from "@/modules/catalog/types";
 
 export default function MoviesPage() {
     return (
-        <div>
-            <MovieGrid movies={[]} header="Movies" />
-        </div>
+        <CategoryGrid type={CategoryName.Movie} />
     );
-};
+}

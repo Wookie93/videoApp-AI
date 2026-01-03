@@ -32,22 +32,21 @@
 
 ## SPRINT 2: Read-Only Features
 
-    [ ] 2.1. Create MovieCard component
+    [x] 2.1. Create MovieCard component
         src/modules/catalog/components/MovieCard.tsx.
 
-    [ ] 2.2. Feature: Trending List (Slice)
+    [x] 2.2. Feature: Trending List (Slice)
         src/modules/catalog/features/trending.
         query.ts: Function getTrendingMovies() (Drizzle select).
         TrendingRail.tsx: Server component (RSC) displaying the carousel (you can use CSS scroll-snap instead of a slider library).
 
-    [ ] 2.3. Feature: Recommended List (Slice)
+    [x] 2.3. Feature: Recommended List (Slice)
         src/modules/catalog/features/recommended.
         query.ts: Function getRecommendedMovies() 
         RecommendedGrid.tsx: component with grid.
 
-    [ ] 2.4. Main Page Integration
+    [x] 2.4. Main Page Integration
         src/app/(main)/page.tsx.
-        Use Suspense to show loading skeletons.
 
 SPRINT 3: Auth
     [ ] 3.1. Auth Module Setup

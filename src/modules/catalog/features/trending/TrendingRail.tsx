@@ -6,8 +6,6 @@ const TrendingRail = async () => {
     const trendingMovies = await getTrendingMovies();
     if (!trendingMovies) return null;
 
-    console.log(trendingMovies);
-
     return (
         <MovieBoxRail movies={trendingMovies} items={trendingMovies.length} />
     )
