@@ -19,3 +19,8 @@ export interface Movie {
     isTrending: boolean | null;
     thumbnail: MovieThumbnail;
 }
+
+export enum CategoryName {
+    Movie = "Movie",
+    TVSeries = "TV Series",
+}
