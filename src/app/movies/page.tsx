@@ -1,5 +1,5 @@
-import CategoryGrid from "@/modules/catalog/features/category/categoryGrid";
-import { CategoryName } from "@/modules/catalog/types";
+import { CategoryGrid, CategoryName } from "@/modules/catalog";
+
 
 export default function MoviesPage() {
     return (

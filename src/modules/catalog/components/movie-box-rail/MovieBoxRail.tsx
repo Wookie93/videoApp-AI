@@ -10,7 +10,7 @@ interface MovieBoxRailProps {
     items?: any;
 }
 
-const MovieBoxRail = ({ movies, items = 10 }: MovieBoxRailProps) => {
+export const MovieBoxRail = ({ movies, items = 10 }: MovieBoxRailProps) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [emblaRef, emblaApi] = useEmblaCarousel({
         align: 'start',
@@ -106,4 +106,3 @@ const MovieBoxRail = ({ movies, items = 10 }: MovieBoxRailProps) => {
     );
 };
 
-export default MovieBoxRail;
