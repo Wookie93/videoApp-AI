@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import RecommendedGrid from './RecommendedGrid';
+import { RecommendedGrid } from './RecommendedGrid';
 import { getRecommended } from './getRecommended';
 
 // Mock Data Fetching
