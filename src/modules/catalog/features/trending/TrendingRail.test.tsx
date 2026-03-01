@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import TrendingRail from './TrendingRail';
+import { TrendingRail } from './TrendingRail';
 import { getTrendingMovies } from './getTrendingMovies';
 
 // Mock the Data Fetching (Server Action/Service)
@@ -10,7 +10,7 @@ vi.mock('./getTrendingMovies', () => ({
 
 // Mock the Child Component (Isolation)
 vi.mock('../../components/movie-box-rail/MovieBoxRail', () => ({
-    default: ({ movies, items }: { movies: any[]; items: number }) => (
+    MovieBoxRail: ({ movies, items }: { movies: any[]; items: number }) => (
         <div data-testid="mock-movie-rail">
             {`Count: ${movies?.length}, Limit: ${items}`}
         </div>

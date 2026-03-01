@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import CategoryGrid from './categoryGrid';
+import { CategoryGrid } from './categoryGrid';
 import { getCategoryData } from './getCategoryData';
 import { CategoryName } from '../../types';
 

@@ -98,7 +98,9 @@ SPRINT 6: Polish & DevOps
     [ ] 5.3. E2E Tests (Playwright) --> delagate to AI agent
         Configure simple test: Go to the main page -> check if the "Trending" text is present.
 
-    [ ] 5.4. README.md
+    [ ] 5.4. Add local data, in case a problem with Supabase occurs.
+
+    [ ] 5.5. README.md
         Write documentation: Describe the Modular Monolith architecture, why Server Actions, how to run the project.
         Add database schema (mermaid diagram).
 
